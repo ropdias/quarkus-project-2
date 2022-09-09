@@ -37,6 +37,5 @@ public class MainResource {
     @Path("/{CEP}")
     public Uni<Address> asyncCEP(@RestPath String CEP) {
         return viaCEPService.getAddressAsync(CEP).onFailure().recoverWithItem(e -> new Address(e.getCause().getMessage()));
-        // newAddress = objectMapper.writeValueAsString(address);
     }
 }
