@@ -4,14 +4,14 @@ import io.quarkus.test.common.QuarkusTestResource;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
 
-import com.github.ropdias.resources.WireMockExtensions;
+import com.github.ropdias.resources.WireMockViaCEP;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
-@QuarkusTestResource(WireMockExtensions.class)
-public class GreetingResourceTest {
+@QuarkusTestResource(WireMockViaCEP.class)
+public class MainResourceTest {
 
     @Test
     public void testSyncCEP01001000() {

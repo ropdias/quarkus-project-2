@@ -11,12 +11,12 @@ import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import org.junit.jupiter.api.Test;
 
-import com.github.ropdias.resources.WireMockExtensions;
+import com.github.ropdias.resources.WireMockViaCEP;
 import com.github.ropdias.viacep.Address;
 import com.github.ropdias.viacep.ViaCEPService;
 
 @QuarkusTest
-@QuarkusTestResource(WireMockExtensions.class)
+@QuarkusTestResource(WireMockViaCEP.class)
 public class ViaCEPServiceTest {
 
     @Inject
