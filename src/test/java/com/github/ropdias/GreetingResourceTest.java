@@ -45,4 +45,14 @@ public class GreetingResourceTest {
                 .body(is("{\"erro\":\"The remote service responded with HTTP 400 !\"}"));
     }
 
+    @Test
+    public void testAsyncError() {
+        given()
+        .pathParam("CEP", "7761232151")
+                .when().get("/{CEP}")
+                .then()
+                .statusCode(200)
+                .body(is("{\"erro\":\"The remote service responded with HTTP 400 !\"}"));
+    }
+
 }
